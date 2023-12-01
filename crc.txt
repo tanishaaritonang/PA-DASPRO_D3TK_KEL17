@@ -1,0 +1,60 @@
+NIM: 13323001|
+ | Representasi Biner: 110010110100101011111001 | CRC: x^23 + x^22 + x^19 + x^17 + x^16 + x^14 + x^11 + x^9 + x^7 + x^6 + x^5 + x^4 + x^3 + 1
+Nilai pangkat tertinggi: 23|
+NIM: 13323002|
+ | Representasi Biner: 110010110100101011111010 | CRC: x^23 + x^22 + x^19 + x^17 + x^16 + x^14 + x^11 + x^9 + x^7 + x^6 + x^5 + x^4 + x^3 + x + 
+Nilai pangkat tertinggi: 23|
+NIM: 13323003|
+ | Representasi Biner: 110010110100101011111011 | CRC: x^23 + x^22 + x^19 + x^17 + x^16 + x^14 + x^11 + x^9 + x^7 + x^6 + x^5 + x^4 + x^3 + x + 1
+Nilai pangkat tertinggi: 23|
+NIM: 13323004|
+ | Representasi Biner: 110010110100101011111100 | CRC: x^23 + x^22 + x^19 + x^17 + x^16 + x^14 + x^11 + x^9 + x^7 + x^6 + x^5 + x^4 + x^3 + x^2 + 
+Nilai pangkat tertinggi: 23|
+NIM: 13323005|
+ | Representasi Biner: 110010110100101011111101 | CRC: x^23 + x^22 + x^19 + x^17 + x^16 + x^14 + x^11 + x^9 + x^7 + x^6 + x^5 + x^4 + x^3 + x^2 + 1
+Nilai pangkat tertinggi: 23|
+NIM: 13323006|
+ | Representasi Biner: 110010110100101011111110 | CRC: x^23 + x^22 + x^19 + x^17 + x^16 + x^14 + x^11 + x^9 + x^7 + x^6 + x^5 + x^4 + x^3 + x^2 + x + 
+Nilai pangkat tertinggi: 23|
+NIM: 13323007|
+ | Representasi Biner: 110010110100101011111111 | CRC: x^23 + x^22 + x^19 + x^17 + x^16 + x^14 + x^11 + x^9 + x^7 + x^6 + x^5 + x^4 + x^3 + x^2 + x + 1
+Nilai pangkat tertinggi: 23|
+NIM: 13323008|
+ | Representasi Biner: 110010110100101100000000 | CRC: x^23 + x^22 + x^19 + x^17 + x^16 + x^14 + x^11 + x^9 + x^8 + 
+Nilai pangkat tertinggi: 23|
+NIM: 13323009|
+ | Representasi Biner: 110010110100101100000001 | CRC: x^23 + x^22 + x^19 + x^17 + x^16 + x^14 + x^11 + x^9 + x^8 + 1
+Nilai pangkat tertinggi: 23|
+NIM: 13323010|
+ | Representasi Biner: 110010110100101100000010 | CRC: x^23 + x^22 + x^19 + x^17 + x^16 + x^14 + x^11 + x^9 + x^8 + x + 
+Nilai pangkat tertinggi: 23|
+NIM: 13323011|
+ | Representasi Biner: 110010110100101100000011 | CRC: x^23 + x^22 + x^19 + x^17 + x^16 + x^14 + x^11 + x^9 + x^8 + x + 1
+Nilai pangkat tertinggi: 23|
+NIM: 13323012|
+ | Representasi Biner: 110010110100101100000100 | CRC: x^23 + x^22 + x^19 + x^17 + x^16 + x^14 + x^11 + x^9 + x^8 + x^2 + 
+Nilai pangkat tertinggi: 23|
+NIM: 13323013|
+ | Representasi Biner: 110010110100101100000101 | CRC: x^23 + x^22 + x^19 + x^17 + x^16 + x^14 + x^11 + x^9 + x^8 + x^2 + 1
+Nilai pangkat tertinggi: 23|
+NIM: 13323014|
+ | Representasi Biner: 110010110100101100000110 | CRC: x^23 + x^22 + x^19 + x^17 + x^16 + x^14 + x^11 + x^9 + x^8 + x^2 + x + 
+Nilai pangkat tertinggi: 23|
+NIM: 13323015|
+ | Representasi Biner: 110010110100101100000111 | CRC: x^23 + x^22 + x^19 + x^17 + x^16 + x^14 + x^11 + x^9 + x^8 + x^2 + x + 1
+Nilai pangkat tertinggi: 23|
+NIM: 13323016|
+ | Representasi Biner: 110010110100101100001000 | CRC: x^23 + x^22 + x^19 + x^17 + x^16 + x^14 + x^11 + x^9 + x^8 + x^3 + 
+Nilai pangkat tertinggi: 23|
+NIM: 13323017|
+ | Representasi Biner: 110010110100101100001001 | CRC: x^23 + x^22 + x^19 + x^17 + x^16 + x^14 + x^11 + x^9 + x^8 + x^3 + 1
+Nilai pangkat tertinggi: 23|
+NIM: 13323018|
+ | Representasi Biner: 110010110100101100001010 | CRC: x^23 + x^22 + x^19 + x^17 + x^16 + x^14 + x^11 + x^9 + x^8 + x^3 + x + 
+Nilai pangkat tertinggi: 23|
+NIM: 13323019|
+ | Representasi Biner: 110010110100101100001011 | CRC: x^23 + x^22 + x^19 + x^17 + x^16 + x^14 + x^11 + x^9 + x^8 + x^3 + x + 1
+Nilai pangkat tertinggi: 23|
+NIM: 13323020|
+ | Representasi Biner: 110010110100101100001100 | CRC: x^23 + x^22 + x^19 + x^17 + x^16 + x^14 + x^11 + x^9 + x^8 + x^3 + x^2 + 
+Nilai pangkat tertinggi: 23|
