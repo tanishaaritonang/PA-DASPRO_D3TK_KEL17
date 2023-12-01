@@ -1,0 +1,160 @@
+a. NIM 1: 13323001
+b. Biner: 110010110100101011111001
+c. Hasil CRC: 000000000000000000001101
+d. Primitive Polynomial: 10011
+e. Primitive Polynomial (Biner): 10011
+f. Hasil Transmisi CRC: 000000000000000000001101
+g. Pembuktian CRC: Tidak Valid
+
+a. NIM 2: 13323002
+b. Biner: 110010110100101011111010
+c. Hasil CRC: 000000000000000000001110
+d. Primitive Polynomial: 10011
+e. Primitive Polynomial (Biner): 10011
+f. Hasil Transmisi CRC: 000000000000000000001110
+g. Pembuktian CRC: Tidak Valid
+
+a. NIM 3: 13323003
+b. Biner: 110010110100101011111011
+c. Hasil CRC: 000000000000000000001111
+d. Primitive Polynomial: 10011
+e. Primitive Polynomial (Biner): 10011
+f. Hasil Transmisi CRC: 000000000000000000001111
+g. Pembuktian CRC: Tidak Valid
+
+a. NIM 4: 13323004
+b. Biner: 110010110100101011111100
+c. Hasil CRC: 000000000000000000001000
+d. Primitive Polynomial: 10011
+e. Primitive Polynomial (Biner): 10011
+f. Hasil Transmisi CRC: 000000000000000000001000
+g. Pembuktian CRC: Tidak Valid
+
+a. NIM 5: 13323005
+b. Biner: 110010110100101011111101
+c. Hasil CRC: 000000000000000000001001
+d. Primitive Polynomial: 10011
+e. Primitive Polynomial (Biner): 10011
+f. Hasil Transmisi CRC: 000000000000000000001001
+g. Pembuktian CRC: Tidak Valid
+
+a. NIM 6: 13323006
+b. Biner: 110010110100101011111110
+c. Hasil CRC: 000000000000000000001010
+d. Primitive Polynomial: 10011
+e. Primitive Polynomial (Biner): 10011
+f. Hasil Transmisi CRC: 000000000000000000001010
+g. Pembuktian CRC: Tidak Valid
+
+a. NIM 7: 13323007
+b. Biner: 110010110100101011111111
+c. Hasil CRC: 000000000000000000001011
+d. Primitive Polynomial: 10011
+e. Primitive Polynomial (Biner): 10011
+f. Hasil Transmisi CRC: 000000000000000000001011
+g. Pembuktian CRC: Tidak Valid
+
+a. NIM 8: 13323008
+b. Biner: 110010110100101100000000
+c. Hasil CRC: 000000000000000000000011
+d. Primitive Polynomial: 10011
+e. Primitive Polynomial (Biner): 10011
+f. Hasil Transmisi CRC: 000000000000000000000011
+g. Pembuktian CRC: Tidak Valid
+
+a. NIM 9: 13323009
+b. Biner: 110010110100101100000001
+c. Hasil CRC: 000000000000000000000010
+d. Primitive Polynomial: 10011
+e. Primitive Polynomial (Biner): 10011
+f. Hasil Transmisi CRC: 000000000000000000000010
+g. Pembuktian CRC: Tidak Valid
+
+a. NIM 10: 13323010
+b. Biner: 110010110100101100000010
+c. Hasil CRC: 000000000000000000000001
+d. Primitive Polynomial: 10011
+e. Primitive Polynomial (Biner): 10011
+f. Hasil Transmisi CRC: 000000000000000000000001
+g. Pembuktian CRC: Tidak Valid
+
+a. NIM 11: 13323011
+b. Biner: 110010110100101100000011
+c. Hasil CRC: 000000000000000000000000
+d. Primitive Polynomial: 10011
+e. Primitive Polynomial (Biner): 10011
+f. Hasil Transmisi CRC: 000000000000000000000000
+g. Pembuktian CRC: Tidak Valid
+
+a. NIM 12: 13323012
+b. Biner: 110010110100101100000100
+c. Hasil CRC: 000000000000000000000111
+d. Primitive Polynomial: 10011
+e. Primitive Polynomial (Biner): 10011
+f. Hasil Transmisi CRC: 000000000000000000000111
+g. Pembuktian CRC: Tidak Valid
+
+a. NIM 13: 13323013
+b. Biner: 110010110100101100000101
+c. Hasil CRC: 000000000000000000000110
+d. Primitive Polynomial: 10011
+e. Primitive Polynomial (Biner): 10011
+f. Hasil Transmisi CRC: 000000000000000000000110
+g. Pembuktian CRC: Tidak Valid
+
+a. NIM 14: 13323014
+b. Biner: 110010110100101100000110
+c. Hasil CRC: 000000000000000000000101
+d. Primitive Polynomial: 10011
+e. Primitive Polynomial (Biner): 10011
+f. Hasil Transmisi CRC: 000000000000000000000101
+g. Pembuktian CRC: Tidak Valid
+
+a. NIM 15: 13323015
+b. Biner: 110010110100101100000111
+c. Hasil CRC: 000000000000000000000100
+d. Primitive Polynomial: 10011
+e. Primitive Polynomial (Biner): 10011
+f. Hasil Transmisi CRC: 000000000000000000000100
+g. Pembuktian CRC: Tidak Valid
+
+a. NIM 16: 13323016
+b. Biner: 110010110100101100001000
+c. Hasil CRC: 000000000000000000001011
+d. Primitive Polynomial: 10011
+e. Primitive Polynomial (Biner): 10011
+f. Hasil Transmisi CRC: 000000000000000000001011
+g. Pembuktian CRC: Tidak Valid
+
+a. NIM 17: 13323017
+b. Biner: 110010110100101100001001
+c. Hasil CRC: 000000000000000000001010
+d. Primitive Polynomial: 10011
+e. Primitive Polynomial (Biner): 10011
+f. Hasil Transmisi CRC: 000000000000000000001010
+g. Pembuktian CRC: Tidak Valid
+
+a. NIM 18: 13323018
+b. Biner: 110010110100101100001010
+c. Hasil CRC: 000000000000000000001001
+d. Primitive Polynomial: 10011
+e. Primitive Polynomial (Biner): 10011
+f. Hasil Transmisi CRC: 000000000000000000001001
+g. Pembuktian CRC: Tidak Valid
+
+a. NIM 19: 13323019
+b. Biner: 110010110100101100001011
+c. Hasil CRC: 000000000000000000001000
+d. Primitive Polynomial: 10011
+e. Primitive Polynomial (Biner): 10011
+f. Hasil Transmisi CRC: 000000000000000000001000
+g. Pembuktian CRC: Tidak Valid
+
+a. NIM 20: 13323020
+b. Biner: 110010110100101100001100
+c. Hasil CRC: 000000000000000000001111
+d. Primitive Polynomial: 10011
+e. Primitive Polynomial (Biner): 10011
+f. Hasil Transmisi CRC: 000000000000000000001111
+g. Pembuktian CRC: Tidak Valid
+
