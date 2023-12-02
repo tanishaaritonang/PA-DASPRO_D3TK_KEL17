@@ -16,56 +16,105 @@ void convertToBinary(char nim[], char binary[]) {
     binary[index] = '\0';
 }
 
-void calculateCRC(char data[], char divisor[], char crcResult[]) {
-    // Implementasi perhitungan CRC di sini
-    // ...
 
-    // Kode perhitungan CRC yang sesuai
-    // ...
 
-    strcpy(crcResult, "0000"); // Contoh nilai CRC kosong untuk sekarang
-}
+int binaryToPolynomial(char binary[], char polynomial[]) {
+    int degree = strlen(binary) - 1;
+    int foundFirstTerm = 0;
+    int maxExponent = -1;
 
-void binerKePolinomial(int bilangan, FILE *outputFile) {
-    if (bilangan == 0) {
-        fprintf(outputFile, "CRC: 0\n");
-        printf("Polinomial: 0\n");
-        return;
+    for (int i = 0; i < strlen(binary); i++) {
+        if (binary[i] == '1') {
+            int currentExponent = degree - i;
+            if (currentExponent > maxExponent) {
+                maxExponent = currentExponent;
+            }
+        }
     }
 
-    int panjang = log2(bilangan) + 1;
-    fprintf(outputFile, "CRC: ");
-    printf("Polinomial: ");
-    for (int i = panjang - 1; i >= 0; i--) {
-        if ((bilangan >> i) & 1) {
-            if (i == 1) {
-                fprintf(outputFile, " + x");
-                printf(" + x");
-            } else if (i == 0) {
-                fprintf(outputFile, " + x^0");
-                printf(" + x^0");
-            } else {
-                if (i == panjang - 1) {
-                    fprintf(outputFile, "x^%d", i);
-                    printf("x^%d", i);
+    int addedTerm = 0;
+    for (int i = 0; i < strlen(binary); i++) {
+        if (binary[i] == '1') {
+            int currentExponent = degree - i;
+            if (!addedTerm) {
+                if (currentExponent == 1) {
+                    strcat(polynomial, "x^1");
+                } else if (currentExponent == 0) {
+                    strcat(polynomial, "x^0");
                 } else {
-                    fprintf(outputFile, " + x^%d", i);
-                    printf(" + x^%d ", i);
+                    char term[10];
+                    sprintf(term, "x^%d", currentExponent);
+                    strcat(polynomial, term);
+                }
+                addedTerm = 1;
+            } else {
+                if (currentExponent == 1) {
+                    strcat(polynomial, " + x^1");
+                } else if (currentExponent == 0) {
+                    strcat(polynomial, " + x^0");
+                } else {
+                    char term[10];
+                    sprintf(term, " + x^%d", currentExponent);
+                    strcat(polynomial, term);
                 }
             }
         }
     }
-    fprintf(outputFile, "\n");
-    printf("\n");
+
+    return maxExponent;
+}
+
+void primitivePolynomial(int maxExponent, char primitivePoly[]) {
+    int nilaiN = maxExponent - 1;// Nilai n ialah 22 maka sesuai ketentuan degree n ialai "x^22 + x + 1"
+    strcpy(primitivePoly, "x^22 + x + 1");
+    printf("Nilai K ialah: %d\n", maxExponent);
+    printf("Nilai N ialah: %d\n", nilaiN);
+    printf("Primitive Polynomial: %s\n", primitivePoly);
+}
+void primitivePolyToBiner(char primitivePoly[]){
+
+}
+void calculateCRC(char data[], char divisor[], char crcResult[]) {
+    int n = strlen(divisor) - 1; // Nilai n yang telah ditentukan sebelumnya (22)
+    int dataLength = strlen(data);
+
+    // Menambahkan n digit angka 0 pada data yang ditransmisikan
+    char newData[160];
+    strcpy(newData, data);
+    for (int i = 0; i < n; i++) {
+        strcat(newData, "0");
+    }
+
+    // Melakukan operasi pembagian
+    for (int i = 0; i <= dataLength - n; i++) {
+        if (newData[i] == '1') {
+            for (int j = 0; j <= n; j++) {
+                newData[i + j] = (newData[i + j] == divisor[j]) ? '0' : '1';
+            }
+        }
+    }
+
+    // Menyimpan hasil sisa operasi XOR sebagai CRC
+    strcpy(crcResult, newData + dataLength);
 }
 
 int main() {
+
+      printf("=========================================\n");
+  printf("         SELAMAT DATANG                \n");
+  printf("=========================================\n");
+  printf("       di SIMULASI CRC NIM D3TK       \n");
+  printf("=========================================\n");
+  printf("    Silakan Pilih Menu   \n");
+  printf("=========================================\n");
     char nim[20][10];
     printf("Input 20 NIM:\n");
     for (int i = 0; i < 20; i++) {
         printf("NIM %d: ", i + 1);
         scanf("%s", nim[i]);
     }
+    char binary[160];
+char crcResult[64];
 
     FILE *outputFile;
     outputFile = fopen("output.txt", "w");
@@ -75,20 +124,32 @@ int main() {
         char crcResult[64];
 
         convertToBinary(nim[i], binary);
-        fprintf(outputFile, "a. NIM %d: %s\n", i + 1, nim[i]);
-        fprintf(outputFile, "b. Biner: %s\n", binary);
+        fprintf(outputFile, "a. NIM %d: %s\n", i + 1, nim[i]);  
+        printf( "a. NIM %d: %s\n", i + 1, nim[i]);  
 
-        char divisor[64] = "10011";
+        fprintf(outputFile, "b. Biner: %s\n", binary);
+        printf( "b. Biner: %s\n", binary);
+
+
+        char polynomial[100] = "";
+        int maxExponent = binaryToPolynomial(binary, polynomial);
+        printf(" c.Polinomial: %s\n", polynomial);
+
+        char divisor[64] = "10110"; // primitve polynomial yang digunakan dalam biner dari "x^22 + x + 1"
         calculateCRC(binary, divisor, crcResult);
 
-        fprintf(outputFile, "c. Hasil CRC: %s\n", crcResult);
-        fprintf(outputFile, "d. Primitive Polynomial: %s\n", divisor);
+        char primitivePoly[100];
+        primitivePolynomial(maxExponent, primitivePoly);
+        fprintf(outputFile, "c.Polinomial: %s\n", polynomial);
+        fprintf(outputFile, "d. Primitive Polynomial: %s\n", primitivePoly);
+        printf( "d. Primitive Polynomial: %s\n", primitivePoly);
         fprintf(outputFile, "e. Primitive Polynomial (Biner): %s\n", divisor);
+        printf( "e. Primitive Polynomial (Biner): %s\n", divisor);
         fprintf(outputFile, "f. Hasil Transmisi CRC: %s\n", crcResult);
+        printf( "f. Hasil Transmisi CRC: %s\n", crcResult);
         fprintf(outputFile, "g. Pembuktian CRC: %s\n\n", strcmp(crcResult, "0000") == 0 ? "Valid" : "Tidak Valid");
+        printf( "g. Pembuktian CRC: %s\n\n", strcmp(crcResult, "0000") == 0 ? "Valid" : "Tidak Valid");
 
-        int bilangan = atoi(crcResult);
-        binerKePolinomial(bilangan, outputFile);
     }
 
     fclose(outputFile);
