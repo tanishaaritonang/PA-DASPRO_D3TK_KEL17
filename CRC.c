@@ -18,14 +18,18 @@ void convertToBinary(char nim[], char binary[]) {
 
 
 
-int binaryToPolynomial(char binary[], char polynomial[]) {
+int binaryToPolynomial(char binary[], char polynomial[], int exponent[], int *count ) {
     int degree = strlen(binary) - 1;
     int foundFirstTerm = 0;
     int maxExponent = -1;
 
+
+    *count = 0;
     for (int i = 0; i < strlen(binary); i++) {
         if (binary[i] == '1') {
             int currentExponent = degree - i;
+            exponent[*count] = currentExponent;
+            (*count)++; 
             if (currentExponent > maxExponent) {
                 maxExponent = currentExponent;
             }
@@ -62,6 +66,11 @@ int binaryToPolynomial(char binary[], char polynomial[]) {
     }
 
     return maxExponent;
+}
+
+int getRandomExponent(int exponents[], int count){
+    int randomIndex = rand() % count;
+    return exponents[randomIndex];
 }
 
 void primitivePolynomial(int maxExponent, char primitivePoly[]) {
@@ -132,8 +141,23 @@ char crcResult[64];
 
 
         char polynomial[100] = "";
-        int maxExponent = binaryToPolynomial(binary, polynomial);
+        int exponent[100]; // Ukuran array mungkin harus disesuaikan dengan kebutuhan
+        int count;
+        int maxExponent = binaryToPolynomial(binary, polynomial, exponent, &count);
         printf(" c.Polinomial: %s\n", polynomial);
+        printf("Nilai n yang kurang dari 23 adalah: ");
+for (int i = 0; i < count; i++) {
+    if (exponent[i] < 23) {
+        printf("%d ", exponent[i]);
+    }
+}
+printf("\n");
+
+        // Mendapatkan nilai acak dari array 'exponent'
+    int randomExp = getRandomExponent(exponent, count);
+    printf("Nilai n acak adalah: %d\n", randomExp);
+
+        printf("\n");
 
         char divisor[64] = "10110"; // primitve polynomial yang digunakan dalam biner dari "x^22 + x + 1"
         calculateCRC(binary, divisor, crcResult);
