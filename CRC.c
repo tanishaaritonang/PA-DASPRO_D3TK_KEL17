@@ -134,6 +134,8 @@ int main()
     printf("Binary representation: %s\n", binary);
 
     fprintf(outputFile, "b. Biner: %s\n", binary);
+    printf( "b. Biner: %s\n", binary);
+
 
     // 2. Hitung CRC
     char divisor[64] = "10011"; // 100 // Contoh primitive polynomial
@@ -141,9 +143,17 @@ int main()
 
     // 3. Output hasil
     fprintf(outputFile, "c. Hasil CRC: %s\n", crcResult);
+    printf( "c. Hasil CRC: %s\n", crcResult);
+
     fprintf(outputFile, "d. Primitive Polynomial: %s\n", divisor);
+    printf( "d. Primitive Polynomial: %s\n", divisor);
+
     fprintf(outputFile, "e. Primitive Polynomial (Biner): %s\n", divisor);
+    printf( "e. Primitive Polynomial (Biner): %s\n", divisor);
+
     fprintf(outputFile, "f. Hasil Transmisi CRC: %s\n", crcResult);
+    printf( "f. Hasil Transmisi CRC: %s\n", crcResult);
+
 
     // binary = 1011
     // crcRes = 0110
@@ -152,10 +162,14 @@ int main()
     // crcRes = 0110
 
     fprintf(outputFile, "c. Concat CRC: %s\n", binary);
+    printf("c. Concat CRC: %s\n", binary);
+
 
     // kalkulasi crc lagi antara divisor dengan binary dengan crcResult
     calculateCRC(binary, divisor, crcResult);
     fprintf(outputFile, "g. Pembuktian CRC: %s\n\n", strcmp(crcResult, "0000") == 0 ? "Valid" : "Tidak Valid");
+    printf( "g. Pembuktian CRC: %s\n\n", strcmp(crcResult, "0000") == 0 ? "Valid" : "Tidak Valid");
+
   }
 
   fclose(outputFile);
