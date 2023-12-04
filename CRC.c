@@ -2,7 +2,6 @@
 #include <stdlib.h>
 #include <string.h>
 
-// Fungsi untuk mengonversi angka desimal menjadi representasi biner
 void convertToBinary(char decimalStr[], char binary[])
 {
   // ubah tipe data dari string ke integer
@@ -45,7 +44,7 @@ void convertToBinary(char decimalStr[], char binary[])
   binary[index] = '\0';
 }
 
-// Fungsi untuk menghitung CRC dari data biner menggunakan divisor tertentu
+// Fungsi untuk menghitung CRC
 void calculateCRC(char binary[], char divisor[], char crcResult[])
 {
   int dataLength = strlen(binary);     // 10110011 // length = 8
@@ -256,7 +255,7 @@ int main()
     // 1. Konversi NIM menjadi biner
     convertToBinary(nim[i], binary);
     fprintf(outputFile, "a. NIM %d: %s\n", i + 1, nim[i]);
-    printf("Binary representation: %s\n", binary);
+    printf("a. NIM %d: %s\n", i + 1, nim[i]);
 
     fprintf(outputFile, "b. Biner: %s\n", binary);
     int maxExponent = binaryToPolynomial(binary, polynomial, exponent, &count);
@@ -272,16 +271,27 @@ int main()
     }
     printf("\n");
 
-    
     // 2. Hitung CRC
     char divisor[64] = "10011"; // 100 // Contoh primitive polynomial
     calculateCRC(binary, divisor, crcResult);
 
     // 3. Output hasil
     fprintf(outputFile, "c. Hasil CRC: %s\n", crcResult);
+
     fprintf(outputFile, "d. Primitive Polynomial: %s\n", divisor);
     fprintf(outputFile, "e. Primitive Polynomial (Biner): %s\n", divisor);
     fprintf(outputFile, "f. Hasil Transmisi CRC: %s\n", crcResult);
+
+    printf("c. Hasil CRC: %s\n", crcResult);
+
+    fprintf(outputFile, "d. Primitive Polynomial: %s\n", divisor);
+    printf("d. Primitive Polynomial: %s\n", divisor);
+
+    fprintf(outputFile, "e. Primitive Polynomial (Biner): %s\n", divisor);
+    printf("e. Primitive Polynomial (Biner): %s\n", divisor);
+
+    fprintf(outputFile, "f. Hasil Transmisi CRC: %s\n", crcResult);
+    printf("f. Hasil Transmisi CRC: %s\n", crcResult);
 
     // binary = 1011
     // crcRes = 0110
@@ -291,16 +301,20 @@ int main()
 
     fprintf(outputFile, "g. Concat CRC: %s\n", binary);
 
+    printf("g. Concat CRC: %s\n", binary);
+
     // kalkulasi crc lagi antara divisor dengan binary dengan crcResult
     calculateCRC(binary, divisor, crcResult);
     fprintf(outputFile, "h. Pembuktian CRC: %s\n\n", strcmp(crcResult, "0000") == 0 ? "Valid" : "Tidak Valid");
 
-     memset(polynomial, 0, sizeof(polynomial));
+    printf("h. Pembuktian CRC: %s\n\n", strcmp(crcResult, "0000") == 0 ? "Valid" : "Tidak Valid");
+
+    memset(polynomial, 0, sizeof(polynomial));
   }
 
   fclose(outputFile);
 
   printf("Program selesai. Hasil disimpan dalam output.txt\n");
+
   return 0;
 }
-
