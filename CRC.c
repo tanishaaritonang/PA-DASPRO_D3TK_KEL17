@@ -231,6 +231,28 @@ int binaryToPolynomial(char binary[], char polynomial[], int exponent[], int *co
 
 int main()
 {
+
+    printf("=========================================\n");
+    printf("         SELAMAT DATANG                \n");
+    printf("=========================================\n");
+    printf("       di SIMULASI CRC NIM D3TK       \n");
+    printf("=========================================\n");
+    printf("    Silakan Pilih Menu   \n");
+    printf("=========================================\n");
+
+    int choice;
+    do{
+    printf("Menu:\n");
+    printf("1. Melakukan CRC Pada NIM\n");
+    printf("2. Keluar\n");
+    printf("Pilih: ");
+    scanf("%d", &choice);
+
+    switch (choice)
+    {
+    case 1:
+    {
+
   // Input data NIM
   char nim[20][10];
   printf("Input 20 NIM:\n");
@@ -255,7 +277,7 @@ int main()
     // 1. Konversi NIM menjadi biner
     convertToBinary(nim[i], binary);
     fprintf(outputFile, "a. NIM %d: %s\n", i + 1, nim[i]);
-    printf("a. NIM %d: %s\n", i + 1, nim[i]);
+    printf("Binary representation: %s\n", binary);
 
     fprintf(outputFile, "b. Biner: %s\n", binary);
     int maxExponent = binaryToPolynomial(binary, polynomial, exponent, &count);
@@ -275,23 +297,12 @@ int main()
     char divisor[64] = "10011"; // 100 // Contoh primitive polynomial
     calculateCRC(binary, divisor, crcResult);
 
+    memset(polynomial, 0, sizeof(polynomial));
+    int divisorPolinomial = binaryToPolynomial("10011", polynomial, exponent, &count);
     // 3. Output hasil
     fprintf(outputFile, "c. Hasil CRC: %s\n", crcResult);
-
-    fprintf(outputFile, "d. Primitive Polynomial: %s\n", divisor);
+    fprintf(outputFile, "d. Primitive Polynomial: %s\n", polynomial);
     fprintf(outputFile, "e. Primitive Polynomial (Biner): %s\n", divisor);
-    fprintf(outputFile, "f. Hasil Transmisi CRC: %s\n", crcResult);
-
-    printf("c. Hasil CRC: %s\n", crcResult);
-
-    fprintf(outputFile, "d. Primitive Polynomial: %s\n", divisor);
-    printf("d. Primitive Polynomial: %s\n", divisor);
-
-    fprintf(outputFile, "e. Primitive Polynomial (Biner): %s\n", divisor);
-    printf("e. Primitive Polynomial (Biner): %s\n", divisor);
-
-    fprintf(outputFile, "f. Hasil Transmisi CRC: %s\n", crcResult);
-    printf("f. Hasil Transmisi CRC: %s\n", crcResult);
 
     // binary = 1011
     // crcRes = 0110
@@ -299,15 +310,12 @@ int main()
     // binary = 10110110
     // crcRes = 0110
 
-    fprintf(outputFile, "g. Concat CRC: %s\n", binary);
-
-    printf("g. Concat CRC: %s\n", binary);
+    fprintf(outputFile, "f. Concat CRC: %s\n", binary);
 
     // kalkulasi crc lagi antara divisor dengan binary dengan crcResult
     calculateCRC(binary, divisor, crcResult);
+    fprintf(outputFile, "g. Hasil Transmisi CRC: %s\n", crcResult);
     fprintf(outputFile, "h. Pembuktian CRC: %s\n\n", strcmp(crcResult, "0000") == 0 ? "Valid" : "Tidak Valid");
-
-    printf("h. Pembuktian CRC: %s\n\n", strcmp(crcResult, "0000") == 0 ? "Valid" : "Tidak Valid");
 
     memset(polynomial, 0, sizeof(polynomial));
   }
@@ -315,6 +323,15 @@ int main()
   fclose(outputFile);
 
   printf("Program selesai. Hasil disimpan dalam output.txt\n");
+  break;
+    }
+     case 2:
+      printf("Program selesai.\n");
+      break;
+    default:
+      printf("Pilihan tidak valid. Silakan pilih lagi.\n");
+    }
+  } while (choice != 2);
 
   return 0;
 }
