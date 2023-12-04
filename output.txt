@@ -1,0 +1,200 @@
+a. NIM 1: 13323001
+b. Biner: 110010110100101011111001
+b.1. Biner menjadi polinomial: x^23 + x^22 + x^19 + x^17 + x^16 + x^14 + x^11 + x^9 + x^7 + x^6 + x^5 + x^4 + x^3 + x^0
+c. Hasil CRC: 0100
+d. Primitive Polynomial: 10011
+e. Primitive Polynomial (Biner): 10011
+f. Hasil Transmisi CRC: 0100
+g. Concat CRC: 1100101101001010111110010100
+h. Pembuktian CRC: Valid
+
+a. NIM 2: 13323002
+b. Biner: 110010110100101011111010
+b.1. Biner menjadi polinomial: x^23 + x^22 + x^19 + x^17 + x^16 + x^14 + x^11 + x^9 + x^7 + x^6 + x^5 + x^4 + x^3 + x^1
+c. Hasil CRC: 0001
+d. Primitive Polynomial: 10011
+e. Primitive Polynomial (Biner): 10011
+f. Hasil Transmisi CRC: 0001
+g. Concat CRC: 1100101101001010111110100001
+h. Pembuktian CRC: Valid
+
+a. NIM 3: 13323003
+b. Biner: 110010110100101011111011
+b.1. Biner menjadi polinomial: x^23 + x^22 + x^19 + x^17 + x^16 + x^14 + x^11 + x^9 + x^7 + x^6 + x^5 + x^4 + x^3 + x^1 + x^0
+c. Hasil CRC: 0010
+d. Primitive Polynomial: 10011
+e. Primitive Polynomial (Biner): 10011
+f. Hasil Transmisi CRC: 0010
+g. Concat CRC: 1100101101001010111110110010
+h. Pembuktian CRC: Valid
+
+a. NIM 4: 13323004
+b. Biner: 110010110100101011111100
+b.1. Biner menjadi polinomial: x^23 + x^22 + x^19 + x^17 + x^16 + x^14 + x^11 + x^9 + x^7 + x^6 + x^5 + x^4 + x^3 + x^2
+c. Hasil CRC: 1011
+d. Primitive Polynomial: 10011
+e. Primitive Polynomial (Biner): 10011
+f. Hasil Transmisi CRC: 1011
+g. Concat CRC: 1100101101001010111111001011
+h. Pembuktian CRC: Valid
+
+a. NIM 5: 13323005
+b. Biner: 110010110100101011111101
+b.1. Biner menjadi polinomial: x^23 + x^22 + x^19 + x^17 + x^16 + x^14 + x^11 + x^9 + x^7 + x^6 + x^5 + x^4 + x^3 + x^2 + x^0
+c. Hasil CRC: 1000
+d. Primitive Polynomial: 10011
+e. Primitive Polynomial (Biner): 10011
+f. Hasil Transmisi CRC: 1000
+g. Concat CRC: 1100101101001010111111011000
+h. Pembuktian CRC: Valid
+
+a. NIM 6: 13323006
+b. Biner: 110010110100101011111110
+b.1. Biner menjadi polinomial: x^23 + x^22 + x^19 + x^17 + x^16 + x^14 + x^11 + x^9 + x^7 + x^6 + x^5 + x^4 + x^3 + x^2 + x^1
+c. Hasil CRC: 1101
+d. Primitive Polynomial: 10011
+e. Primitive Polynomial (Biner): 10011
+f. Hasil Transmisi CRC: 1101
+g. Concat CRC: 1100101101001010111111101101
+h. Pembuktian CRC: Valid
+
+a. NIM 7: 13323007
+b. Biner: 110010110100101011111111
+b.1. Biner menjadi polinomial: x^23 + x^22 + x^19 + x^17 + x^16 + x^14 + x^11 + x^9 + x^7 + x^6 + x^5 + x^4 + x^3 + x^2 + x^1 + x^0
+c. Hasil CRC: 1110
+d. Primitive Polynomial: 10011
+e. Primitive Polynomial (Biner): 10011
+f. Hasil Transmisi CRC: 1110
+g. Concat CRC: 1100101101001010111111111110
+h. Pembuktian CRC: Valid
+
+a. NIM 8: 13323008
+b. Biner: 110010110100101100000000
+b.1. Biner menjadi polinomial: x^23 + x^22 + x^19 + x^17 + x^16 + x^14 + x^11 + x^9 + x^8
+c. Hasil CRC: 0101
+d. Primitive Polynomial: 10011
+e. Primitive Polynomial (Biner): 10011
+f. Hasil Transmisi CRC: 0101
+g. Concat CRC: 1100101101001011000000000101
+h. Pembuktian CRC: Valid
+
+a. NIM 9: 13323009
+b. Biner: 110010110100101100000001
+b.1. Biner menjadi polinomial: x^23 + x^22 + x^19 + x^17 + x^16 + x^14 + x^11 + x^9 + x^8 + x^0
+c. Hasil CRC: 0110
+d. Primitive Polynomial: 10011
+e. Primitive Polynomial (Biner): 10011
+f. Hasil Transmisi CRC: 0110
+g. Concat CRC: 1100101101001011000000010110
+h. Pembuktian CRC: Valid
+
+a. NIM 10: 13323010
+b. Biner: 110010110100101100000010
+b.1. Biner menjadi polinomial: x^23 + x^22 + x^19 + x^17 + x^16 + x^14 + x^11 + x^9 + x^8 + x^1
+c. Hasil CRC: 0011
+d. Primitive Polynomial: 10011
+e. Primitive Polynomial (Biner): 10011
+f. Hasil Transmisi CRC: 0011
+g. Concat CRC: 1100101101001011000000100011
+h. Pembuktian CRC: Valid
+
+a. NIM 11: 13323011
+b. Biner: 110010110100101100000011
+b.1. Biner menjadi polinomial: x^23 + x^22 + x^19 + x^17 + x^16 + x^14 + x^11 + x^9 + x^8 + x^1 + x^0
+c. Hasil CRC: 0000
+d. Primitive Polynomial: 10011
+e. Primitive Polynomial (Biner): 10011
+f. Hasil Transmisi CRC: 0000
+g. Concat CRC: 1100101101001011000000110000
+h. Pembuktian CRC: Valid
+
+a. NIM 12: 13323012
+b. Biner: 110010110100101100000100
+b.1. Biner menjadi polinomial: x^23 + x^22 + x^19 + x^17 + x^16 + x^14 + x^11 + x^9 + x^8 + x^2
+c. Hasil CRC: 1001
+d. Primitive Polynomial: 10011
+e. Primitive Polynomial (Biner): 10011
+f. Hasil Transmisi CRC: 1001
+g. Concat CRC: 1100101101001011000001001001
+h. Pembuktian CRC: Valid
+
+a. NIM 13: 13323013
+b. Biner: 110010110100101100000101
+b.1. Biner menjadi polinomial: x^23 + x^22 + x^19 + x^17 + x^16 + x^14 + x^11 + x^9 + x^8 + x^2 + x^0
+c. Hasil CRC: 1010
+d. Primitive Polynomial: 10011
+e. Primitive Polynomial (Biner): 10011
+f. Hasil Transmisi CRC: 1010
+g. Concat CRC: 1100101101001011000001011010
+h. Pembuktian CRC: Valid
+
+a. NIM 14: 13323014
+b. Biner: 110010110100101100000110
+b.1. Biner menjadi polinomial: x^23 + x^22 + x^19 + x^17 + x^16 + x^14 + x^11 + x^9 + x^8 + x^2 + x^1
+c. Hasil CRC: 1111
+d. Primitive Polynomial: 10011
+e. Primitive Polynomial (Biner): 10011
+f. Hasil Transmisi CRC: 1111
+g. Concat CRC: 1100101101001011000001101111
+h. Pembuktian CRC: Valid
+
+a. NIM 15: 13323015
+b. Biner: 110010110100101100000111
+b.1. Biner menjadi polinomial: x^23 + x^22 + x^19 + x^17 + x^16 + x^14 + x^11 + x^9 + x^8 + x^2 + x^1 + x^0
+c. Hasil CRC: 1100
+d. Primitive Polynomial: 10011
+e. Primitive Polynomial (Biner): 10011
+f. Hasil Transmisi CRC: 1100
+g. Concat CRC: 1100101101001011000001111100
+h. Pembuktian CRC: Valid
+
+a. NIM 16: 13323016
+b. Biner: 110010110100101100001000
+b.1. Biner menjadi polinomial: x^23 + x^22 + x^19 + x^17 + x^16 + x^14 + x^11 + x^9 + x^8 + x^3
+c. Hasil CRC: 1110
+d. Primitive Polynomial: 10011
+e. Primitive Polynomial (Biner): 10011
+f. Hasil Transmisi CRC: 1110
+g. Concat CRC: 1100101101001011000010001110
+h. Pembuktian CRC: Valid
+
+a. NIM 17: 13323017
+b. Biner: 110010110100101100001001
+b.1. Biner menjadi polinomial: x^23 + x^22 + x^19 + x^17 + x^16 + x^14 + x^11 + x^9 + x^8 + x^3 + x^0
+c. Hasil CRC: 1101
+d. Primitive Polynomial: 10011
+e. Primitive Polynomial (Biner): 10011
+f. Hasil Transmisi CRC: 1101
+g. Concat CRC: 1100101101001011000010011101
+h. Pembuktian CRC: Valid
+
+a. NIM 18: 13323018
+b. Biner: 110010110100101100001010
+b.1. Biner menjadi polinomial: x^23 + x^22 + x^19 + x^17 + x^16 + x^14 + x^11 + x^9 + x^8 + x^3 + x^1
+c. Hasil CRC: 1000
+d. Primitive Polynomial: 10011
+e. Primitive Polynomial (Biner): 10011
+f. Hasil Transmisi CRC: 1000
+g. Concat CRC: 1100101101001011000010101000
+h. Pembuktian CRC: Valid
+
+a. NIM 19: 13323019
+b. Biner: 110010110100101100001011
+b.1. Biner menjadi polinomial: x^23 + x^22 + x^19 + x^17 + x^16 + x^14 + x^11 + x^9 + x^8 + x^3 + x^1 + x^0
+c. Hasil CRC: 1011
+d. Primitive Polynomial: 10011
+e. Primitive Polynomial (Biner): 10011
+f. Hasil Transmisi CRC: 1011
+g. Concat CRC: 1100101101001011000010111011
+h. Pembuktian CRC: Valid
+
+a. NIM 20: 13323020
+b. Biner: 110010110100101100001100
+b.1. Biner menjadi polinomial: x^23 + x^22 + x^19 + x^17 + x^16 + x^14 + x^11 + x^9 + x^8 + x^3 + x^2
+c. Hasil CRC: 0010
+d. Primitive Polynomial: 10011
+e. Primitive Polynomial (Biner): 10011
+f. Hasil Transmisi CRC: 0010
+g. Concat CRC: 1100101101001011000011000010
+h. Pembuktian CRC: Valid
+

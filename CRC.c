@@ -20,14 +20,13 @@ void convertToBinary(char decimalStr[], char binary[])
 
   for (int i = size - 1; i >= 0; i--)
   {
-    // Contoh nilai nim itu 179 
+    // Contoh nilai nim itu 179
     // >> shift right
     // Operasi >> pada bilangan biner adalah operasi shift-right, yang memindahkan semua bit dalam representasi biner ke kanan sejumlah posisi tertentu.
     // 179 >> 7 = 1
     // biner 179 = 00000000 00000000 00000000 10110011
-    // >> shift right 7 posisi 
+    // >> shift right 7 posisi
     // 00000000 00000000 00000000 00000001
-
 
     if ((n >> i) & 1 || significantBitsStarted)
     {
@@ -82,7 +81,6 @@ void calculateCRC(char binary[], char divisor[], char crcResult[])
   // value = 1 0 0 1 1
   // index = 0 1 2 3 4
 
-
   // dataLength = 8
   for (int i = 0; i < dataLength; i++)
   {
@@ -92,7 +90,7 @@ void calculateCRC(char binary[], char divisor[], char crcResult[])
       {
         tempBinary[i + j] = (tempBinary[i + j] == tempDivisor[j]) ? '0' : '1';
 
-        // i = 0 
+        // i = 0
         // tempBinary[0] = (tempBinary[0] == tempDivisor[0]) ? '0' : '1'; => 0
         // tempBinary[1] = (tempBinary[1] == tempDivisor[1]) ? '0' : '1'; => 0
         // tempBinary[2] = (tempBinary[2] == tempDivisor[2]) ? '0' : '1'; => 1
@@ -107,6 +105,129 @@ void calculateCRC(char binary[], char divisor[], char crcResult[])
 
   // Null-terminate the result string
   crcResult[divisorLength - 1] = '\0';
+}
+
+void decimalToPolynomial(int n, char polynomial[])
+{
+  int degree = sizeof(int) * 8 - 1;
+  int count = 0;
+  int exponent[50];
+
+  for (int i = degree; i >= 0; i--)
+  {
+    if ((n >> i) & 1)
+    {
+      exponent[count++] = i;
+    }
+  }
+
+  int addedTerm = 0;
+  for (int i = 0; i < count; i++)
+  {
+    int currentExponent = exponent[i];
+    if (!addedTerm)
+    {
+      if (currentExponent == 1)
+      {
+        strcat(polynomial, "x^1");
+      }
+      else if (currentExponent == 0)
+      {
+        strcat(polynomial, "x^0");
+      }
+      else
+      {
+        char term[10];
+        sprintf(term, "x^%d", currentExponent);
+        strcat(polynomial, term);
+      }
+      addedTerm = 1;
+    }
+    else
+    {
+      if (currentExponent == 1)
+      {
+        strcat(polynomial, " + x^1");
+      }
+      else if (currentExponent == 0)
+      {
+        strcat(polynomial, " + x^0");
+      }
+      else
+      {
+        char term[10];
+        sprintf(term, " + x^%d", currentExponent);
+        strcat(polynomial, term);
+      }
+    }
+  }
+}
+
+int binaryToPolynomial(char binary[], char polynomial[], int exponent[], int *count)
+{
+  int degree = strlen(binary) - 1;
+  int maxExponent = -1;
+
+  *count = 0;
+  for (int i = 0; i < strlen(binary); i++)
+  {
+    if (binary[i] == '1')
+    {
+      int currentExponent = degree - i;
+      exponent[*count] = currentExponent;
+      (*count)++;
+      if (currentExponent > maxExponent)
+      {
+        maxExponent = currentExponent;
+      }
+    }
+  }
+
+  int addedTerm = 0;
+  for (int i = 0; i < strlen(binary); i++)
+  {
+    if (binary[i] == '1')
+    {
+      int currentExponent = degree - i;
+      if (!addedTerm)
+      {
+        if (currentExponent == 1)
+        {
+          strcat(polynomial, "x^1");
+        }
+        else if (currentExponent == 0)
+        {
+          strcat(polynomial, "x^0");
+        }
+        else
+        {
+          char term[10];
+          sprintf(term, "x^%d", currentExponent);
+          strcat(polynomial, term);
+        }
+        addedTerm = 1;
+      }
+      else
+      {
+        if (currentExponent == 1)
+        {
+          strcat(polynomial, " + x^1");
+        }
+        else if (currentExponent == 0)
+        {
+          strcat(polynomial, " + x^0");
+        }
+        else
+        {
+          char term[10];
+          sprintf(term, " + x^%d", currentExponent);
+          strcat(polynomial, term);
+        }
+      }
+    }
+  }
+
+  return maxExponent;
 }
 
 int main()
@@ -128,6 +249,9 @@ int main()
   {
     char binary[160]; // Panjang biner, 20 NIM * 8 bit
     char crcResult[64];
+    char polynomial[160];
+    int exponent[100];
+    int count;
 
     // 1. Konversi NIM menjadi biner
     convertToBinary(nim[i], binary);
@@ -135,26 +259,29 @@ int main()
     printf("Binary representation: %s\n", binary);
 
     fprintf(outputFile, "b. Biner: %s\n", binary);
-    printf( "b. Biner: %s\n", binary);
+    int maxExponent = binaryToPolynomial(binary, polynomial, exponent, &count);
+    fprintf(outputFile, "b.1. Biner menjadi polinomial: %s\n", polynomial);
+    printf("Nilai k adalah : %d\n", maxExponent);
+    printf("Nilai n yang kurang dari k adalah: ");
+    for (int i = 0; i < count; i++)
+    {
+      if (exponent[i] < 23)
+      {
+        printf("%d ", exponent[i]);
+      }
+    }
+    printf("\n");
 
-
+    
     // 2. Hitung CRC
     char divisor[64] = "10011"; // 100 // Contoh primitive polynomial
     calculateCRC(binary, divisor, crcResult);
 
     // 3. Output hasil
     fprintf(outputFile, "c. Hasil CRC: %s\n", crcResult);
-    printf( "c. Hasil CRC: %s\n", crcResult);
-
     fprintf(outputFile, "d. Primitive Polynomial: %s\n", divisor);
-    printf( "d. Primitive Polynomial: %s\n", divisor);
-
     fprintf(outputFile, "e. Primitive Polynomial (Biner): %s\n", divisor);
-    printf( "e. Primitive Polynomial (Biner): %s\n", divisor);
-
     fprintf(outputFile, "f. Hasil Transmisi CRC: %s\n", crcResult);
-    printf( "f. Hasil Transmisi CRC: %s\n", crcResult);
-
 
     // binary = 1011
     // crcRes = 0110
@@ -162,20 +289,18 @@ int main()
     // binary = 10110110
     // crcRes = 0110
 
-    fprintf(outputFile, "c. Concat CRC: %s\n", binary);
-    printf("c. Concat CRC: %s\n", binary);
-
+    fprintf(outputFile, "g. Concat CRC: %s\n", binary);
 
     // kalkulasi crc lagi antara divisor dengan binary dengan crcResult
     calculateCRC(binary, divisor, crcResult);
-    fprintf(outputFile, "g. Pembuktian CRC: %s\n\n", strcmp(crcResult, "0000") == 0 ? "Valid" : "Tidak Valid");
-    printf( "g. Pembuktian CRC: %s\n\n", strcmp(crcResult, "0000") == 0 ? "Valid" : "Tidak Valid");
+    fprintf(outputFile, "h. Pembuktian CRC: %s\n\n", strcmp(crcResult, "0000") == 0 ? "Valid" : "Tidak Valid");
 
+     memset(polynomial, 0, sizeof(polynomial));
   }
 
   fclose(outputFile);
 
   printf("Program selesai. Hasil disimpan dalam output.txt\n");
-
- return 0;
+  return 0;
 }
+
