@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 
+// Fungsi untuk mengonversi angka desimal menjadi representasi biner
 void convertToBinary(char decimalStr[], char binary[])
 {
   // ubah tipe data dari string ke integer
@@ -45,7 +46,7 @@ void convertToBinary(char decimalStr[], char binary[])
   binary[index] = '\0';
 }
 
-// Fungsi untuk menghitung CRC
+// Fungsi untuk menghitung CRC dari data biner menggunakan divisor tertentu
 void calculateCRC(char binary[], char divisor[], char crcResult[])
 {
   int dataLength = strlen(binary);     // 10110011 // length = 8
