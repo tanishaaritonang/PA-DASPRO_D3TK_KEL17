@@ -12,7 +12,7 @@ void convertToBinary(char decimalStr[], char binary[])
 
   // besar integer dalam bit
   int size = sizeof(n) * 8;
-  printf("SIZE %d\n", size);
+  //printf("SIZE %d\n", size);
 
   // Index binary array
   int index = 0;
@@ -235,17 +235,17 @@ int main()
     printf("=========================================\n");
     printf("         SELAMAT DATANG                \n");
     printf("=========================================\n");
-    printf("       di SIMULASI CRC NIM D3TK       \n");
+    printf("       SIMULASI CRC NIM D3TK       \n");
     printf("=========================================\n");
-    printf("    Silakan Pilih Menu   \n");
+    printf("       Silakan Pilih Menu   \n");
     printf("=========================================\n");
 
     int choice;
     do{
     printf("Menu:\n");
-    printf("1. masukkan nim\n");
-    printf("2. lakukan crc\n");
-    printf("3. keluar\n");
+    printf("1. Masukkan NIM\n");
+    printf("2. Lakukan CRC\n");
+    printf("3. Keluar\n");
 
     printf("Pilih: ");
     scanf("%d", &choice);
@@ -298,19 +298,10 @@ int main()
         convertToBinary(nim[i], binary);
         fprintf(outputFile, "a. NIM %d: %s\n", i + 1, nim[i]);
 
-        printf("Binary representation: %s\n", binary);
-
         fprintf(outputFile, "b. Biner: %s\n", binary);
         int maxExponent = binaryToPolynomial(binary, polynomial, exponent, &count);
         fprintf(outputFile, "b.1. Biner menjadi polinomial: %s\n", polynomial);
-        printf("Nilai k adalah : %d\n", maxExponent);
-        printf("Nilai n yang kurang dari k adalah: ");
-        for (int j = 0; j < count; j++) {
-            if (exponent[j] < maxExponent) {
-                printf("%d ", exponent[j]);
-            }
-        }
-        printf("\n");
+        fprintf(outputFile, "Nilai k adalah : %d\n", maxExponent);
 
         // 2. Hitung CRC
         char divisor[64] = "10011"; // 100 // Contoh primitive polynomial
@@ -319,9 +310,10 @@ int main()
         memset(polynomial, 0, sizeof(polynomial));
         int divisorPolinomial = binaryToPolynomial("10011", polynomial, exponent, &count);
         // 3. Output hasil
-        fprintf(outputFile, "c. Hasil CRC: %s\n", crcResult);
-        fprintf(outputFile, "d. Primitive Polynomial: %s\n", polynomial);
-        fprintf(outputFile, "e. Primitive Polynomial (Biner): %s\n", divisor);
+   
+        fprintf(outputFile, "c. Primitive Polynomial: %s\n", polynomial);
+        fprintf(outputFile, "d. Primitive Polynomial (Biner): %s\n", divisor);
+        fprintf(outputFile, "e. Hasil CRC: %s\n", crcResult);
 
         // binary = 1011
         // crcRes = 0110
