@@ -313,7 +313,7 @@ int main()
    
         fprintf(outputFile, "c. Primitive Polynomial: %s\n", polynomial);
         fprintf(outputFile, "d. Primitive Polynomial (Biner): %s\n", divisor);
-        fprintf(outputFile, "e. Hasil CRC: %s\n", crcResult);
+        fprintf(outputFile, "e. Hasil Transmisi CRC: %s\n", crcResult);
 
         // binary = 1011
         // crcRes = 0110
@@ -325,7 +325,7 @@ int main()
 
         // kalkulasi crc lagi antara divisor dengan binary dengan crcResult
         calculateCRC(binary, divisor, crcResult);
-        fprintf(outputFile, "g. Hasil Transmisi CRC: %s\n", crcResult);
+        fprintf(outputFile, "g. Pembuktian CRC yang diterima telah sesuai: %s\n", crcResult);
         fprintf(outputFile, "h. Pembuktian CRC: %s\n\n", strcmp(crcResult, "0000") == 0 ? "Valid" : "Tidak Valid");
 
         memset(polynomial, 0, sizeof(polynomial));
