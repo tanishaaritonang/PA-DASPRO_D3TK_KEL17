@@ -4,10 +4,9 @@ b.1. Biner menjadi polinomial: x^23 + x^22 + x^19 + x^17 + x^16 + x^14 + x^11 + 
 Nilai k adalah : 23
 c. Primitive Polynomial: x^4 + x^1 + x^0
 d. Primitive Polynomial (Biner): 10011
-Data yang telah diTransmsikan : x^4 + x^1 + x^00000
-e. Hasil CRC: 0100
+e. Hasil Transmisi CRC: 0100
 f. Concat CRC: 1100101101001010111110010100
-g. Hasil Transmisi CRC: 0000
+g. Pembuktian CRC yang diterima telah sesuai: 0000
 h. Pembuktian CRC: Valid
 
 a. NIM 2: 13323002
@@ -16,10 +15,9 @@ b.1. Biner menjadi polinomial: x^23 + x^22 + x^19 + x^17 + x^16 + x^14 + x^11 + 
 Nilai k adalah : 23
 c. Primitive Polynomial: x^4 + x^1 + x^0
 d. Primitive Polynomial (Biner): 10011
-Data yang telah diTransmsikan : x^4 + x^1 + x^00000
-e. Hasil CRC: 0001
+e. Hasil Transmisi CRC: 0001
 f. Concat CRC: 1100101101001010111110100001
-g. Hasil Transmisi CRC: 0000
+g. Pembuktian CRC yang diterima telah sesuai: 0000
 h. Pembuktian CRC: Valid
 
 a. NIM 3: 13323003
@@ -28,10 +26,9 @@ b.1. Biner menjadi polinomial: x^23 + x^22 + x^19 + x^17 + x^16 + x^14 + x^11 + 
 Nilai k adalah : 23
 c. Primitive Polynomial: x^4 + x^1 + x^0
 d. Primitive Polynomial (Biner): 10011
-Data yang telah diTransmsikan : x^4 + x^1 + x^00000
-e. Hasil CRC: 0010
+e. Hasil Transmisi CRC: 0010
 f. Concat CRC: 1100101101001010111110110010
-g. Hasil Transmisi CRC: 0000
+g. Pembuktian CRC yang diterima telah sesuai: 0000
 h. Pembuktian CRC: Valid
 
 a. NIM 4: 13323004
@@ -40,10 +37,9 @@ b.1. Biner menjadi polinomial: x^23 + x^22 + x^19 + x^17 + x^16 + x^14 + x^11 + 
 Nilai k adalah : 23
 c. Primitive Polynomial: x^4 + x^1 + x^0
 d. Primitive Polynomial (Biner): 10011
-Data yang telah diTransmsikan : x^4 + x^1 + x^00000
-e. Hasil CRC: 1011
+e. Hasil Transmisi CRC: 1011
 f. Concat CRC: 1100101101001010111111001011
-g. Hasil Transmisi CRC: 0000
+g. Pembuktian CRC yang diterima telah sesuai: 0000
 h. Pembuktian CRC: Valid
 
 a. NIM 5: 13323005
@@ -52,10 +48,9 @@ b.1. Biner menjadi polinomial: x^23 + x^22 + x^19 + x^17 + x^16 + x^14 + x^11 + 
 Nilai k adalah : 23
 c. Primitive Polynomial: x^4 + x^1 + x^0
 d. Primitive Polynomial (Biner): 10011
-Data yang telah diTransmsikan : x^4 + x^1 + x^00000
-e. Hasil CRC: 1000
+e. Hasil Transmisi CRC: 1000
 f. Concat CRC: 1100101101001010111111011000
-g. Hasil Transmisi CRC: 0000
+g. Pembuktian CRC yang diterima telah sesuai: 0000
 h. Pembuktian CRC: Valid
 
 a. NIM 6: 13323006
@@ -64,10 +59,9 @@ b.1. Biner menjadi polinomial: x^23 + x^22 + x^19 + x^17 + x^16 + x^14 + x^11 + 
 Nilai k adalah : 23
 c. Primitive Polynomial: x^4 + x^1 + x^0
 d. Primitive Polynomial (Biner): 10011
-Data yang telah diTransmsikan : x^4 + x^1 + x^00000
-e. Hasil CRC: 1101
+e. Hasil Transmisi CRC: 1101
 f. Concat CRC: 1100101101001010111111101101
-g. Hasil Transmisi CRC: 0000
+g. Pembuktian CRC yang diterima telah sesuai: 0000
 h. Pembuktian CRC: Valid
 
 a. NIM 7: 13323007
@@ -76,10 +70,9 @@ b.1. Biner menjadi polinomial: x^23 + x^22 + x^19 + x^17 + x^16 + x^14 + x^11 + 
 Nilai k adalah : 23
 c. Primitive Polynomial: x^4 + x^1 + x^0
 d. Primitive Polynomial (Biner): 10011
-Data yang telah diTransmsikan : x^4 + x^1 + x^00000
-e. Hasil CRC: 1110
+e. Hasil Transmisi CRC: 1110
 f. Concat CRC: 1100101101001010111111111110
-g. Hasil Transmisi CRC: 0000
+g. Pembuktian CRC yang diterima telah sesuai: 0000
 h. Pembuktian CRC: Valid
 
 a. NIM 8: 13323008
@@ -88,10 +81,9 @@ b.1. Biner menjadi polinomial: x^23 + x^22 + x^19 + x^17 + x^16 + x^14 + x^11 + 
 Nilai k adalah : 23
 c. Primitive Polynomial: x^4 + x^1 + x^0
 d. Primitive Polynomial (Biner): 10011
-Data yang telah diTransmsikan : x^4 + x^1 + x^00000
-e. Hasil CRC: 0101
+e. Hasil Transmisi CRC: 0101
 f. Concat CRC: 1100101101001011000000000101
-g. Hasil Transmisi CRC: 0000
+g. Pembuktian CRC yang diterima telah sesuai: 0000
 h. Pembuktian CRC: Valid
 
 a. NIM 9: 13323009
@@ -100,10 +92,9 @@ b.1. Biner menjadi polinomial: x^23 + x^22 + x^19 + x^17 + x^16 + x^14 + x^11 + 
 Nilai k adalah : 23
 c. Primitive Polynomial: x^4 + x^1 + x^0
 d. Primitive Polynomial (Biner): 10011
-Data yang telah diTransmsikan : x^4 + x^1 + x^00000
-e. Hasil CRC: 0110
+e. Hasil Transmisi CRC: 0110
 f. Concat CRC: 1100101101001011000000010110
-g. Hasil Transmisi CRC: 0000
+g. Pembuktian CRC yang diterima telah sesuai: 0000
 h. Pembuktian CRC: Valid
 
 a. NIM 10: 13323010
@@ -112,10 +103,9 @@ b.1. Biner menjadi polinomial: x^23 + x^22 + x^19 + x^17 + x^16 + x^14 + x^11 + 
 Nilai k adalah : 23
 c. Primitive Polynomial: x^4 + x^1 + x^0
 d. Primitive Polynomial (Biner): 10011
-Data yang telah diTransmsikan : x^4 + x^1 + x^00000
-e. Hasil CRC: 0011
+e. Hasil Transmisi CRC: 0011
 f. Concat CRC: 1100101101001011000000100011
-g. Hasil Transmisi CRC: 0000
+g. Pembuktian CRC yang diterima telah sesuai: 0000
 h. Pembuktian CRC: Valid
 
 a. NIM 11: 13323011
@@ -124,10 +114,9 @@ b.1. Biner menjadi polinomial: x^23 + x^22 + x^19 + x^17 + x^16 + x^14 + x^11 + 
 Nilai k adalah : 23
 c. Primitive Polynomial: x^4 + x^1 + x^0
 d. Primitive Polynomial (Biner): 10011
-Data yang telah diTransmsikan : x^4 + x^1 + x^00000
-e. Hasil CRC: 0000
+e. Hasil Transmisi CRC: 0000
 f. Concat CRC: 1100101101001011000000110000
-g. Hasil Transmisi CRC: 0000
+g. Pembuktian CRC yang diterima telah sesuai: 0000
 h. Pembuktian CRC: Valid
 
 a. NIM 12: 13323012
@@ -136,10 +125,9 @@ b.1. Biner menjadi polinomial: x^23 + x^22 + x^19 + x^17 + x^16 + x^14 + x^11 + 
 Nilai k adalah : 23
 c. Primitive Polynomial: x^4 + x^1 + x^0
 d. Primitive Polynomial (Biner): 10011
-Data yang telah diTransmsikan : x^4 + x^1 + x^00000
-e. Hasil CRC: 1001
+e. Hasil Transmisi CRC: 1001
 f. Concat CRC: 1100101101001011000001001001
-g. Hasil Transmisi CRC: 0000
+g. Pembuktian CRC yang diterima telah sesuai: 0000
 h. Pembuktian CRC: Valid
 
 a. NIM 13: 13323013
@@ -148,10 +136,9 @@ b.1. Biner menjadi polinomial: x^23 + x^22 + x^19 + x^17 + x^16 + x^14 + x^11 + 
 Nilai k adalah : 23
 c. Primitive Polynomial: x^4 + x^1 + x^0
 d. Primitive Polynomial (Biner): 10011
-Data yang telah diTransmsikan : x^4 + x^1 + x^00000
-e. Hasil CRC: 1010
+e. Hasil Transmisi CRC: 1010
 f. Concat CRC: 1100101101001011000001011010
-g. Hasil Transmisi CRC: 0000
+g. Pembuktian CRC yang diterima telah sesuai: 0000
 h. Pembuktian CRC: Valid
 
 a. NIM 14: 13323014
@@ -160,10 +147,9 @@ b.1. Biner menjadi polinomial: x^23 + x^22 + x^19 + x^17 + x^16 + x^14 + x^11 + 
 Nilai k adalah : 23
 c. Primitive Polynomial: x^4 + x^1 + x^0
 d. Primitive Polynomial (Biner): 10011
-Data yang telah diTransmsikan : x^4 + x^1 + x^00000
-e. Hasil CRC: 1111
+e. Hasil Transmisi CRC: 1111
 f. Concat CRC: 1100101101001011000001101111
-g. Hasil Transmisi CRC: 0000
+g. Pembuktian CRC yang diterima telah sesuai: 0000
 h. Pembuktian CRC: Valid
 
 a. NIM 15: 13323015
@@ -172,10 +158,9 @@ b.1. Biner menjadi polinomial: x^23 + x^22 + x^19 + x^17 + x^16 + x^14 + x^11 + 
 Nilai k adalah : 23
 c. Primitive Polynomial: x^4 + x^1 + x^0
 d. Primitive Polynomial (Biner): 10011
-Data yang telah diTransmsikan : x^4 + x^1 + x^00000
-e. Hasil CRC: 1100
+e. Hasil Transmisi CRC: 1100
 f. Concat CRC: 1100101101001011000001111100
-g. Hasil Transmisi CRC: 0000
+g. Pembuktian CRC yang diterima telah sesuai: 0000
 h. Pembuktian CRC: Valid
 
 a. NIM 16: 13323016
@@ -184,10 +169,9 @@ b.1. Biner menjadi polinomial: x^23 + x^22 + x^19 + x^17 + x^16 + x^14 + x^11 + 
 Nilai k adalah : 23
 c. Primitive Polynomial: x^4 + x^1 + x^0
 d. Primitive Polynomial (Biner): 10011
-Data yang telah diTransmsikan : x^4 + x^1 + x^00000
-e. Hasil CRC: 1110
+e. Hasil Transmisi CRC: 1110
 f. Concat CRC: 1100101101001011000010001110
-g. Hasil Transmisi CRC: 0000
+g. Pembuktian CRC yang diterima telah sesuai: 0000
 h. Pembuktian CRC: Valid
 
 a. NIM 17: 13323017
@@ -196,10 +180,9 @@ b.1. Biner menjadi polinomial: x^23 + x^22 + x^19 + x^17 + x^16 + x^14 + x^11 + 
 Nilai k adalah : 23
 c. Primitive Polynomial: x^4 + x^1 + x^0
 d. Primitive Polynomial (Biner): 10011
-Data yang telah diTransmsikan : x^4 + x^1 + x^00000
-e. Hasil CRC: 1101
+e. Hasil Transmisi CRC: 1101
 f. Concat CRC: 1100101101001011000010011101
-g. Hasil Transmisi CRC: 0000
+g. Pembuktian CRC yang diterima telah sesuai: 0000
 h. Pembuktian CRC: Valid
 
 a. NIM 18: 13323018
@@ -208,10 +191,9 @@ b.1. Biner menjadi polinomial: x^23 + x^22 + x^19 + x^17 + x^16 + x^14 + x^11 + 
 Nilai k adalah : 23
 c. Primitive Polynomial: x^4 + x^1 + x^0
 d. Primitive Polynomial (Biner): 10011
-Data yang telah diTransmsikan : x^4 + x^1 + x^00000
-e. Hasil CRC: 1000
+e. Hasil Transmisi CRC: 1000
 f. Concat CRC: 1100101101001011000010101000
-g. Hasil Transmisi CRC: 0000
+g. Pembuktian CRC yang diterima telah sesuai: 0000
 h. Pembuktian CRC: Valid
 
 a. NIM 19: 13323019
@@ -220,10 +202,9 @@ b.1. Biner menjadi polinomial: x^23 + x^22 + x^19 + x^17 + x^16 + x^14 + x^11 + 
 Nilai k adalah : 23
 c. Primitive Polynomial: x^4 + x^1 + x^0
 d. Primitive Polynomial (Biner): 10011
-Data yang telah diTransmsikan : x^4 + x^1 + x^00000
-e. Hasil CRC: 1011
+e. Hasil Transmisi CRC: 1011
 f. Concat CRC: 1100101101001011000010111011
-g. Hasil Transmisi CRC: 0000
+g. Pembuktian CRC yang diterima telah sesuai: 0000
 h. Pembuktian CRC: Valid
 
 a. NIM 20: 13323020
@@ -232,9 +213,8 @@ b.1. Biner menjadi polinomial: x^23 + x^22 + x^19 + x^17 + x^16 + x^14 + x^11 + 
 Nilai k adalah : 23
 c. Primitive Polynomial: x^4 + x^1 + x^0
 d. Primitive Polynomial (Biner): 10011
-Data yang telah diTransmsikan : x^4 + x^1 + x^00000
-e. Hasil CRC: 0010
+e. Hasil Transmisi CRC: 0010
 f. Concat CRC: 1100101101001011000011000010
-g. Hasil Transmisi CRC: 0000
+g. Pembuktian CRC yang diterima telah sesuai: 0000
 h. Pembuktian CRC: Valid
 

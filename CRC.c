@@ -106,61 +106,6 @@ void calculateCRC(char binary[], char divisor[], char crcResult[])
   crcResult[divisorLength - 1] = '\0';
 }
 
-void decimalToPolynomial(int n, char polynomial[])
-{
-  int degree = sizeof(int) * 8 - 1;
-  int count = 0;
-  int exponent[50];
-
-  for (int i = degree; i >= 0; i--)
-  {
-    if ((n >> i) & 1)
-    {
-      exponent[count++] = i;
-    }
-  }
-
-  int addedTerm = 0;
-  for (int i = 0; i < count; i++)
-  {
-    int currentExponent = exponent[i];
-    if (!addedTerm)
-    {
-      if (currentExponent == 1)
-      {
-        strcat(polynomial, "x^1");
-      }
-      else if (currentExponent == 0)
-      {
-        strcat(polynomial, "x^0");
-      }
-      else
-      {
-        char term[10];
-        sprintf(term, "x^%d", currentExponent);
-        strcat(polynomial, term);
-      }
-      addedTerm = 1;
-    }
-    else
-    {
-      if (currentExponent == 1)
-      {
-        strcat(polynomial, " + x^1");
-      }
-      else if (currentExponent == 0)
-      {
-        strcat(polynomial, " + x^0");
-      }
-      else
-      {
-        char term[10];
-        sprintf(term, " + x^%d", currentExponent);
-        strcat(polynomial, term);
-      }
-    }
-  }
-}
 
 int binaryToPolynomial(char binary[], char polynomial[], int exponent[], int *count)
 {
